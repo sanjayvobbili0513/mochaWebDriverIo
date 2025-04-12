@@ -11,11 +11,18 @@
     },
 
     "url": {
-        "orangeUrl": "https://opensource-demo.orangehrmlive.com/web/index.php/auth/login"
+        "orangeUrl": "https://opensource-demo.orangehrmlive.com/web/index.php/auth/login",
+        "storeUrl":"https://www.demoblaze.com/index.html"
     },
 
     "credentials": {
         "orangeUserId":"Admin",
-        "orangePassWord":"admin123"
+        "orangePassWord":"admin123",
+        "storeUserCredentials": "sampleProductUser"
+    },
+
+    "options" : {
+        "login": "Log in",
+        "storeTitle":"STORE"
     }
 }
