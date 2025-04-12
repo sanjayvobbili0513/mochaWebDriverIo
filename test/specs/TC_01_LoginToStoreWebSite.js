@@ -5,7 +5,7 @@ let url = sample.url.storeUrl;
 let credentials = sample.credentials.storeUserCredentials;
 
 
-describe("Login in to Rahul Shetty Acadamy url", async function(){
+describe("TC_01_LoginToStoreWebSite", async function(){
 
     it('Step1: Navigate to URL and enter credentials', async function () {
         await mainPage.loginToRealm(url,credentials,credentials);
