@@ -1,0 +1,21 @@
+{
+    "waits": {
+        "veryshort": 10000,
+        "short": 20000,
+        "medium": 40000,
+        "long": 80000,
+        "veryLong": 100000,
+        "max": 120000,
+        "extraMax": 130000,
+        "tripleMax": 150000
+    },
+
+    "url": {
+        "orangeUrl": "https://opensource-demo.orangehrmlive.com/web/index.php/auth/login"
+    },
+
+    "credentials": {
+        "orangeUserId":"Admin",
+        "orangePassWord":"admin123"
+    }
+}
