@@ -13,5 +13,4 @@ describe("TC_01_LoginToStoreWebSite", async function(){
         await expect(browser).toHaveTitle(sample.options.storeTitle);
     });
 
-    // this is updated by sanjay
 })
