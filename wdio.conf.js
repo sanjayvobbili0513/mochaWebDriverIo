@@ -22,7 +22,7 @@ export const config = {
     //
     specs: [
         // './test/specs/firstTest.js',
-        './test/specs/loginTest.js'
+        './test/specs/TC_01_LoginToStoreWebSite.js'
     ],
     // Patterns to exclude.
     exclude: [
