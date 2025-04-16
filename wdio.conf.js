@@ -20,9 +20,15 @@ export const config = {
     // The path of the spec files will be resolved relative from the directory of
     // of the config file unless it's absolute.
     //
+
+    // suite : {
+    //     smoke:['sample.js', 'sample2.js']
+    // },
+
     specs: [
         // './test/specs/firstTest.js',
-        './test/specs/TC_01_LoginToStoreWebSite.js'
+        './test/specs/TC_01_LoginToStoreWebSite.js',
+        './test/specs/TC_02_WindowHandles.js'
     ],
     // Patterns to exclude.
     exclude: [
@@ -44,14 +50,17 @@ export const config = {
     // and 30 processes will get spawned. The property handles how many capabilities
     // from the same test should run tests.
     //
-    maxInstances: 10,
+    maxInstances: 1,
     //
     // If you have trouble getting all important capabilities together, check out the
     // Sauce Labs platform configurator - a great tool to configure your capabilities:
     // https://saucelabs.com/platform/platform-configurator
     //
     capabilities: [{
-        browserName: 'chrome'
+        // maxInstances:1,
+        browserName: 'chrome',
+        // acceptInsecureCerts:true
+        acceptInsecureCerts: true
     }],
 
     //
@@ -132,7 +141,11 @@ export const config = {
         ui: 'bdd',
         timeout: 60000
     },
-
+    reporters: [['allure', {
+        outputDir: 'allure-results',
+        disableWebdriverStepsReporting: false,
+        disableWebdriverScreenshotsReporting: false,
+    }]],
     //
     // =====
     // Hooks
@@ -227,8 +240,12 @@ export const config = {
      * @param {boolean} result.passed    true if test has passed, otherwise false
      * @param {object}  result.retries   information about spec related retries, e.g. `{ attempts: 0, limit: 0 }`
      */
-    // afterTest: function(test, context, { error, result, duration, passed, retries }) {
-    // },
+    afterTest: function(test, context, { error, result, duration, passed, retries }) {
+        if (error) {
+             browser.takeScreenshot();
+        }
+    
+    },
 
 
     /**
@@ -292,4 +309,5 @@ export const config = {
     */
     // afterAssertion: function(params) {
     // }
+
 }
