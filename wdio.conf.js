@@ -22,13 +22,13 @@ export const config = {
     //
 
     // suite : {
-    //     smoke:['sample.js', 'sample2.js']
+    //     Smoke:['sample.js', 'sample2.js']
     // },
 
     specs: [
-        // './test/specs/firstTest.js',
         './test/specs/TC_01_LoginToStoreWebSite.js',
-        './test/specs/TC_02_WindowHandles.js'
+        './test/specs/TC_02_WindowHandles.js',
+        './test/specs/TC_03_AddProductToCart.js'
     ],
     // Patterns to exclude.
     exclude: [
