@@ -1,0 +1,1 @@
+{"total":2,"items":[{"uid":"ce8ba428dc788f6c6cd4d989f0150e1e","name":"This tc is to test window Handles","statistic":{"failed":0,"broken":0,"skipped":0,"passed":3,"unknown":0,"total":3}},{"uid":"4586fe638d8dcd1611159150fce5b6fb","name":"TC_01_LoginToStoreWebSite","statistic":{"failed":0,"broken":0,"skipped":0,"passed":1,"unknown":0,"total":1}}]}

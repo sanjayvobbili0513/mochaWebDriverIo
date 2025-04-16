@@ -1,0 +1,5 @@
+"DESCRIPTION","DURATION IN MS","NAME","PARENT SUITE","START TIME","STATUS","STOP TIME","SUB SUITE","SUITE","TEST CLASS","TEST METHOD"
+"","10199","Step3: window handling and performing actions","","Wed Apr 16 15:24:09 IST 2025","passed","Wed Apr 16 15:24:19 IST 2025","","This tc is to test window Handles","",""
+"","5446","Step1: Navigate to URL and enter credentials","","Wed Apr 16 15:24:01 IST 2025","passed","Wed Apr 16 15:24:06 IST 2025","","TC_01_LoginToStoreWebSite","",""
+"","956","Step1: Navigate to url","","Wed Apr 16 15:24:08 IST 2025","passed","Wed Apr 16 15:24:09 IST 2025","","This tc is to test window Handles","",""
+"","59","Step2: click on the link to another window","","Wed Apr 16 15:24:09 IST 2025","passed","Wed Apr 16 15:24:09 IST 2025","","This tc is to test window Handles","",""
