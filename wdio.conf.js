@@ -22,13 +22,13 @@ export const config = {
     //
 
     // suite : {
-    //     smoke:['sample.js', 'sample2.js']
+    //     Smoke:['sample.js', 'sample2.js']
     // },
 
     specs: [
-        // './test/specs/firstTest.js',
         './test/specs/TC_01_LoginToStoreWebSite.js',
-        './test/specs/TC_02_WindowHandles.js'
+        './test/specs/TC_02_WindowHandles.js',
+        './test/specs/TC_03_AddProductToCart.js'
     ],
     // Patterns to exclude.
     exclude: [
@@ -133,7 +133,11 @@ export const config = {
     // Test reporter for stdout.
     // The only one supported by default is 'dot'
     // see also: https://webdriver.io/docs/dot-reporter
-    reporters: ['spec'],
+    reporters: ['spec',['allure',{
+        outputDir: 'allure-results',
+        disableWebdriverStepsReporting: false,
+        disableWebdriverScreenshotsReporting: false,
+    }]],
 
     // Options to be passed to Mocha.
     // See the full list at http://mochajs.org/
@@ -141,11 +145,11 @@ export const config = {
         ui: 'bdd',
         timeout: 60000
     },
-    reporters: [['allure', {
-        outputDir: 'allure-results',
-        disableWebdriverStepsReporting: false,
-        disableWebdriverScreenshotsReporting: false,
-    }]],
+    // reporters: [['allure', {
+    //     outputDir: 'allure-results',
+    //     disableWebdriverStepsReporting: false,
+    //     disableWebdriverScreenshotsReporting: false,
+    // }]],
     //
     // =====
     // Hooks
@@ -241,7 +245,7 @@ export const config = {
      * @param {object}  result.retries   information about spec related retries, e.g. `{ attempts: 0, limit: 0 }`
      */
     afterTest: function(test, context, { error, result, duration, passed, retries }) {
-        if (error) {
+        if (!passed) {
              browser.takeScreenshot();
         }
     
