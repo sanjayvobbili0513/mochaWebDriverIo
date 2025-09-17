@@ -1,0 +1,41 @@
+{
+  "env": {
+    "es2021": true,
+    "node": true,
+    "mocha": true
+  },
+  "globals": {
+    "browser": "readonly",
+    "$": "readonly",
+    "$$": "readonly"
+  },
+  "extends": [
+    "eslint:recommended",
+    "plugin:mocha/recommended",
+    "plugin:unicorn/recommended",
+    "plugin:prettier/recommended"
+  ],
+  "plugins": ["mocha", "unicorn", "filenames-simple"],
+  "rules": {
+    "camelcase": ["error", { "properties": "never", "ignoreImports": true }],
+    "unicorn/filename-case": ["error", { "case": "kebabCase" }],
+    "filenames-simple/naming-convention": [
+      "error",
+      { "rule": "^[a-z][a-z0-9-]*$", "ignoreMiddleExtensions": true }
+    ],
+    "mocha/no-exclusive-tests": "error",
+    "mocha/no-identical-title": "error",
+    "quotes": ["error", "single"],
+    "semi": ["error", "always"],
+    "indent": ["error", 2],
+    "max-len": ["error", { "code": 100 }]
+  },
+  "overrides": [
+    {
+      "files": ["framework/**/*.js"],
+      "rules": {
+        "unicorn/filename-case": ["error", { "case": "camelCase" }]
+      }
+    }
+  ]
+}
