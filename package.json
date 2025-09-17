@@ -21,7 +21,7 @@
     "allure:generate": "allure generate allure-results --clean -o allure-report",
     "allure:open": "allure open allure-report",
     "qmate": "npm run wdio && npm run allure:generate && npm run allure:open",
-    "lint": "eslint .",
+    "lint": "NODE_OPTIONS='--max-old-space-size=4096' eslint ./tests ./src",
     "lint:fix": "eslint . --fix",
     "format": "prettier --check .",
     "format:fix": "prettier --write ."
