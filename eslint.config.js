@@ -4,6 +4,9 @@ import unicornPlugin from 'eslint-plugin-unicorn';
 import prettierPlugin from 'eslint-plugin-prettier';
 
 export default [
+  {
+    ignores: ['node_modules', 'dist', 'allure-report', 'allure-results'], // ⛔ ignore build/report folders
+  },
   js.configs.recommended,
   {
     files: ['**/*.js'],
