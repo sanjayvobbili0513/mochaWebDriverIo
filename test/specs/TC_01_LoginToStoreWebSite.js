@@ -11,6 +11,7 @@ describe("TC_01_LoginToStoreWebSite", async function(){
         await mainPage.loginToRealm(url,credentials,credentials);
         console.log(browser.getTitle());
         await expect(browser).toHaveTitle(sample.options.storeTitle);
+        
         // main branch update
     });
 
